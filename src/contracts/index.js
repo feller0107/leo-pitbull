@@ -1,8 +1,8 @@
 import { ethers } from "ethers";
 
-import Contrats from "./contracts/56.json";
+import Contrats from "./contracts/4.json";
 
-const supportChainId = 56;
+const supportChainId = 4;
 
 const RPCS = {
     1: "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
