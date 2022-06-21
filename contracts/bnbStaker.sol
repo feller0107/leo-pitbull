@@ -77,9 +77,9 @@ contract Claimable is Ownable {
 contract BNBStaker is Claimable {
 	using SafeMath for uint256;
 
-	uint256 constant public INVEST_MIN_AMOUNT = 0.1 ether;
+	uint256 constant public INVEST_MIN_AMOUNT = 0.01 ether;
 	uint256[] public REFERRAL_PERCENTS = [60, 30, 10];
-	uint256 constant public PROJECT_FEE = 150;
+	uint256 constant public PROJECT_FEE = 500;
 	uint256 constant public PERCENT_STEP = 3;
 	uint256 constant public WITHDRAW_FEE = 1000; //In base point
 	uint256 constant public PERCENTS_DIVIDER = 1000;
@@ -127,12 +127,18 @@ contract BNBStaker is Claimable {
 	constructor() {
 		commissionWallet = payable(owner());
 		startUNIX = 0;
-        plans.push(Plan(14, 80));
-        plans.push(Plan(21, 75));
-        plans.push(Plan(28, 70));
-        plans.push(Plan(14, 80));
-        plans.push(Plan(21, 75));
-        plans.push(Plan(28, 70));
+        // plans.push(Plan(14, 80));
+        // plans.push(Plan(21, 75));
+        // plans.push(Plan(28, 70));
+        // plans.push(Plan(14, 80));
+        // plans.push(Plan(21, 75));
+        // plans.push(Plan(28, 70));
+		plans.push(Plan(1, 8));
+        plans.push(Plan(1, 8));
+        plans.push(Plan(1, 8));
+        plans.push(Plan(1, 8));
+        plans.push(Plan(1, 8));
+        plans.push(Plan(1, 8));
 	}
 
 	function launch() public {
